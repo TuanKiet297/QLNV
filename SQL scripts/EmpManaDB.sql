@@ -1,6 +1,7 @@
 -- Tạo bảng EMPLOYEES
 CREATE TABLE EMPLOYEES (
-    emp_id INT AUTO_INCREMENT PRIMARY KEY,
+    	emp_id INT AUTO_INCREMENT PRIMARY KEY,
+	personal_id VARCHAR(12) UNIQUE,
 	first_name VARCHAR(20),
 	last_name VARCHAR(20),
 	tin VARCHAR(14) UNIQUE, -- Tax identification number
@@ -11,14 +12,6 @@ CREATE TABLE EMPLOYEES (
 	salary INT,
 	status VARCHAR(10) NOT NULL,
 	user_type VARCHAR(10) NOT NULL
-);
-
--- Tạo bảng PERSONAL_DETAIL
-CREATE TABLE PERSONAL_DETAIL(
-	emp_id INT PRIMARY KEY,
-	personal_id VARCHAR(12) UNIQUE,
-	first_name VARCHAR(20),
-	last_name VARCHAR(20),
 	gender binary,
 	address VARCHAR(255),
 	tel VARCHAR(10) UNIQUE,
