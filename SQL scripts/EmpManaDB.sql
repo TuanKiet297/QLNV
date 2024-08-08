@@ -9,7 +9,6 @@ CREATE TABLE EMPLOYEES (
 	department_id INT,
 	position_id INT,
 	salary INT,
-	password VARCHAR(255) NOT NULL,
 	status VARCHAR(10) NOT NULL,
 	user_type VARCHAR(10) NOT NULL
 );
