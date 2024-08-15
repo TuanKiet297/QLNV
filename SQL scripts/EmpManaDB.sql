@@ -1,35 +1,23 @@
 -- Tạo bảng EMPLOYEES
 CREATE TABLE EMPLOYEES (
-    emp_id INT AUTO_INCREMENT PRIMARY KEY,
-
-	first_name VARCHAR(20),
-	last_name VARCHAR(20),
-	
-	tin VARCHAR(14) UNIQUE, -- Tax identification number
-	
-	acc_number VARCHAR(20) UNIQUE, -- stk ngân hàng
-	
-	start_date DATE,
-    
-	department_id INT,
-	position_id INT,
-	salary INT,
-    password VARCHAR(255) NOT NULL,
-    status VARCHAR(10) NOT NULL,
-    user_type VARCHAR(10) NOT NULL
-);
-
--- Tạo bảng PERSONAL_DETAIL
-CREATE TABLE PERSONAL_DETAIL(
-	emp_id INT PRIMARY KEY,
+    	emp_id INT AUTO_INCREMENT PRIMARY KEY,
 	personal_id VARCHAR(12) UNIQUE,
 	first_name VARCHAR(20),
 	last_name VARCHAR(20),
+	tin VARCHAR(14) UNIQUE, -- Tax identification number
+	acc_number VARCHAR(20) UNIQUE, -- stk ngân hàng
+	start_date DATE,
+	department_id INT,
+	position_id INT,
+	salary INT,
+	status VARCHAR(10) NOT NULL,
+	user_type VARCHAR(10) NOT NULL
 	gender binary,
 	address VARCHAR(255),
 	tel VARCHAR(10) UNIQUE,
 	dob DATE,
 	email VARCHAR(100) UNIQUE
+	password VARCHAR(255) NOT NULL,
 );
 
 -- Tạo bảng DEPARTMENTS
