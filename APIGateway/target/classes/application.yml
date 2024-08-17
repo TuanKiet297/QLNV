@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: APIGateway
+  cloud:
+    gateway:
+      discovery:
+          locator:
+            enabled: true
+      routes:
+        - id: QLNV-route
+          uri: lb://QLNV
+          predicates:
+            - Path=/QLNV/**
+        - id: QLDT-route
+          uri: lb://QLDT
+          predicates:
+            - Path=/rewards/**
+    discovery:
+      enabled: true
+server:
+  port: 8083
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
