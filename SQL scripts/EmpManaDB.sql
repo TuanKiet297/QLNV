@@ -67,17 +67,17 @@ CREATE TABLE ACTIVITIES (
 
 -- Tạo bảng POINT_HISTORY
 CREATE TABLE POINT_HISTORY (
-    emp_id INT NOT NULL,
+     id INT AUTO_INCREMENT PRIMARY KEY,
+    	emp_id INT NOT NULL,
 	changed_on DATETIME NOT NULL, -- thời gian xảy ra biến động
 	amount INT,
 	activity BINARY, -- tăng hoặc giảm
 	reward_id INT,
-	PRIMARY KEY (emp_id, changed_on),
     FOREIGN KEY (emp_id) REFERENCES EMPLOYEES(emp_id)
 );
 
 -- Tạo bảng REWARD_LIST
-CREATE TABLE REWARD_LIST (
+CREATE TABLE REWARD (
     reward_id INT AUTO_INCREMENT PRIMARY KEY,
 	name VARCHAR(255),
 	point INT,
